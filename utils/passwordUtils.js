@@ -5,16 +5,13 @@ const hashPassword = async (pass) => {
     const salt = await bcrypt.genSalt(10);
     return await bcrypt.hash(pass, salt);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
+    throw new Error("Ошибка при хешировании пароля!");
   }
 };
 
 const comparePassword = async (pass, hash) => {
-  try {
-    return await bcrypt.compare(pass, hash);
-  } catch (error) {
-    console.log(error);
-  }
+  return await bcrypt.compare(pass, hash);
 };
 
 module.exports = { hashPassword, comparePassword };
