@@ -14,8 +14,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/api/auth", routes.authRoutes);
+app.use("/api/bookings", routes.bookingRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Сервер запущен на порту: ${PORT}`);
 });
+
