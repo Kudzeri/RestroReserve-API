@@ -11,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "dashboard.render.com",
+        url: "restroreserve-api.onrender.com",
       },
     ],
     components: {
