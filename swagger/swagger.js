@@ -11,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "restroreserve-api.onrender.com",
+        url: "/",
       },
     ],
     components: {
