@@ -14,6 +14,7 @@ connectDB();
 app.use(
   cors({
     origin: "*",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   })
 );
 app.use(bodyParser.json());
