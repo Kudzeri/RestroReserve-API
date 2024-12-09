@@ -113,9 +113,9 @@ exports.getUserBookings = async (req, res) => {
 
     const result = bookings.map((booking) => ({
       id: booking._id,
-      стол: booking.table.number,
-      дата: booking.startTime.toISOString().split("T")[0],
-      время: `${booking.startTime
+      table: booking.table.number,
+      date: booking.startTime.toISOString().split("T")[0],
+      time: `${booking.startTime
         .toISOString()
         .split("T")[1]
         .slice(0, 5)}-${booking.endTime
@@ -124,7 +124,7 @@ exports.getUserBookings = async (req, res) => {
         .slice(0, 5)}`,
     }));
 
-    res.json({ бронирования: result });
+    res.json({ booking: result });
   } catch (error) {
     res.status(500).json({ message: "Ошибка сервера", error: error.message });
   }
