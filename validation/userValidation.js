@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const RegisterSchema = Joi.object({
+const registerSchema = Joi.object({
   name: Joi.string().min(3).max(16).required().messages({
     "string.base": "Имя пользователя должно быть строкой",
     "string.empty": "Имя пользователя не может быть пустым",
@@ -46,4 +46,4 @@ const loginSchema = Joi.object({
   }),
 });
 
-module.exports = { RegisterSchema, loginSchema };
+module.exports = { registerSchema, loginSchema };
