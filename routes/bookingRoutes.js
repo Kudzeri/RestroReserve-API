@@ -95,7 +95,7 @@ router.get("/", authMiddleware, getUserBookings);
  *         description: Ошибка сервера
  */
 
-router.delete("/:id", authMiddleware, cancelBooking);
+router.post("/:id/delete", authMiddleware, cancelBooking);
 /**
  * @swagger
  * /api/bookings/{id}:
