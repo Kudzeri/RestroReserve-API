@@ -43,3 +43,6 @@ const seedTables = async () => {
 };
 
 seedTables();
+
+
+module.exports = seedTables;
